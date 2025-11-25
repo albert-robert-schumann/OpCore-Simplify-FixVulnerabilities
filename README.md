@@ -17,6 +17,7 @@
 <p> Outdated UA string - it was using an outdated Chrome 131 UA which exposed users to unpatched Google Chrome flaws that Google has already patched - or even worse - redirect to less secure servers. This is mitigated by using the latest UA for Safari - 26.1.</p>
 <p> Other change:</p>
 <p>-The updater in the main branch downloads updates from this repository instead from the official one to avoid the vulnerabilities that have been patched before to be reintroduced.</p>
+<p>-Adding init.py as a placeholder to improve OpCore-Simplify's reliability, it will apply this only for this project in the near future.</p>
 
 </div>
 
