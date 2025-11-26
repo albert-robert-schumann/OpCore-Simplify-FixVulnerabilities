@@ -11,7 +11,7 @@
     <a href="#-contributing">Contributing</a> •
     <a href="#-license">License</a> •
     <a href="#-credits">Credits</a> •
-    <a href="#-contact">Contact</a>
+    <a href="#-contact">Contact the owner of the official project</a>
   </p>
 <p> ## Security & Maintenance </p>
 <p> </p>
