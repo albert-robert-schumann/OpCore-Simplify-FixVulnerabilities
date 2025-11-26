@@ -17,7 +17,7 @@
 <p> </p>
 <p> This project has sucessfully mitigated these vulnerabilities:</p>
 <p> Outdated UA string - it was using an outdated Chrome 131 UA which exposed users to unpatched Google Chrome flaws that Google has already patched - or even worse - redirect to less secure servers. This is mitigated by using the latest UA for Safari - 26.1.</p>
-<p> WiFi passwords in wifi_extractor.py were stored in plain text. This is mitigated by changing line 345 to print("{:<6} {:<32} {:<8}".format(index, ssid[:31] + "..." if len(ssid) > 31 else ssid, "******")).</p>
+<p> WiFi passwords in wifi_extractor.py were stored in plain text. This is mitigated by  CodeQL and GitHub Copilot.</p>
 <p> Other changes:</p>
 <p>-The updater in the main branch downloads updates from this repository instead from the official one to avoid the vulnerabilities that have been patched before to be reintroduced.</p>
 <p>-Adding init.py as a placeholder to improve OpCore-Simplify's reliability, it will apply this only for this project in the near future as the maintainer denied to apply this patch.</p>
