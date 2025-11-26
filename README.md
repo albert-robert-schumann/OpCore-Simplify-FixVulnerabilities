@@ -20,7 +20,7 @@
 <p> Other change:</p>
 <p>-The updater in the main branch downloads updates from this repository instead from the official one to avoid the vulnerabilities that have been patched before to be reintroduced.</p>
 <p>-Adding init.py as a placeholder to improve OpCore-Simplify's reliability, it will apply this only for this project in the near future as the maintainer denied to apply this patch.</p>
-<p> Deleting the funding.yml file as it is only for the official repository, not this one.</p>
+<p>-Deleting the funding.yml file as it is only for the official repository, not this one.</p>
 
 </div>
 
