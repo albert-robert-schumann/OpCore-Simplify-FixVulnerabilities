@@ -110,66 +110,7 @@
    - Force load kexts on unsupported macOS versions.
 
 ## 🚀 **How To Use**
-
-1. **Download OpCore Simplify**:
-   - Click **Code** → **Download ZIP**, or download directly via this [link](https://github.com/lzhoang2801/OpCore-Simplify/archive/refs/heads/main.zip).  
-   - Extract the downloaded ZIP file to your desired location.
-
-   ![Download OpCore Simplify](https://i.imgur.com/mcE7OSX.png)
-
-2. **Running OpCore Simplify**:
-   - On **Windows**, run `OpCore-Simplify.bat`.
-   - On **macOS**, run `OpCore-Simplify.command`. On macOS 15 Sequoia and macOS 26 Tahoe these extra steps are required:
-1. When you double click the OpCore-Simplify, it'll throw a warning. Click on Done.
-2. Next, go to System Settings > Privacy & Security
-3. Next, scroll down
-4. Next click on Open Anyway
-5. then Open Anyway once again
-6. Then type your admin password and hit enter.
-   - On **Linux**, run `OpCore-Simplify.py` with existing Python interpreter.
-
-   ![OpCore Simplify Menu](https://i.imgur.com/vTr1V9D.png)
-
-7. **Selecting hardware report**:
-   - On Windows, there will be an option for `E. Export hardware report`. It's recommended to use this for the best results with your hardware configuration and BIOS at the time of building. This option is unavailable for macOS and Linux.
-   - Alternatively, use [**Hardware Sniffer**](https://github.com/lzhoang2801/Hardware-Sniffer) to create a `Report.json` and ACPI dump for configuration manully.
-
-   ![Selecting hardware report](https://i.imgur.com/MbRmIGJ.png)
-
-   ![Loading ACPI Tables](https://i.imgur.com/SbL6N6v.png)
-
-   ![Compatibility Checker](https://i.imgur.com/kuDGMmp.png)
-
-8. **Selecting macOS Version and Customizing OpenCore EFI**:
-   - By default, the latest compatible macOS version will be selected for your hardware.
-   - OpCore Simplify will automatically apply essential ACPI patches and kexts. 
-   - You can manually review and customize these settings as needed.
-
-   ![OpCore Simplify Menu](https://i.imgur.com/TSk9ejy.png)
-
-9. **Building OpenCore EFI**:
-   - Once you've customized all options, select **Build OpenCore EFI** to generate your EFI.
-   - The tool will automatically download the necessary bootloader and kexts, which may take a few minutes.
-
-   ![WiFi Profile Extractor](https://i.imgur.com/71TkJkD.png)
-
-   ![Choosing Codec Layout ID](https://i.imgur.com/Mcm20EQ.png)
-
-   ![Building OpenCore EFI](https://i.imgur.com/deyj5de.png)
-
-10. **USB Mapping**:
-   - After building your EFI, follow the steps for mapping USB ports.
-
-   ![Results](https://i.imgur.com/MIPigPF.png)
-
-11. **Create USB and Install macOS**: 
-   - Use [**UnPlugged**](https://github.com/corpnewt/UnPlugged) on Windows to create a USB macOS installer, or follow [this guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html) for macOS.
-   - For troubleshooting, refer to the [OpenCore Troubleshooting Guide](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/troubleshooting.html).
-
-> [!NOTE]
-> 1. After a successful installation, if OpenCore Legacy Patcher is required, simply apply root patches to activate the missing features (such as modern Broadcom Wi-Fi card and graphics acceleration).
-> 
-> 2. For AMD GPUs, after applying root patches from OpenCore Legacy Patcher, you need to remove the boot argument `-radvesa`/`-amd_no_dgpu_accel` for graphics acceleration to work.
+For a tutorial on how to use OpCore-Simplify, for now please go to https://lzhoang2801-github-io.translate.goog/gathering-files/opencore-efi?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp . I'll make my own at some point.
 
 ## 🤝 **Contributing**
 
