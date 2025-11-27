@@ -28,7 +28,13 @@
 > - Patience and persistence in resolving any issues that arise
 >
 > Our tool doesn't eliminate these steps, but it ensures you start with a solid foundation.
->
+
+## **If the installation of macOS is successfull, please don't forget to confirm in the official discussion** 
+> [!IMPORTANT]
+> If the installation process is successful using OpCore Simplify, please confirm it at [Successful Hackintosh Setup with OpCore Simplify](https://github.com/lzhoang2801/OpCore-Simplify/discussions/23). And don't forget to recommend other people this repository.
+> This will greatly assist others in the community.
+
+> OpCore Simplify is the ONLY tool that builds OpenCore EFI based on your complete hardware configuration, not just predefined options. This fundamental difference sets us apart from other tools in the Hackintosh community.
 ## **Security & Maintenance**
 > This project doesn't rely just on people to find vulnerabilities - it also uses CodeQL to increase accuracy and find vulnerabilities on time.
 
