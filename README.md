@@ -110,7 +110,7 @@
    - Force load kexts on unsupported macOS versions.
 
 ## 🚀 **How To Use**
-For a tutorial on how to use OpCore-Simplify, for now please go to https://lzhoang2801-github-io.translate.goog/gathering-files/opencore-efi?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp . I'll make my own at some point.
+For a tutorial on how to use OpCore-Simplify, please go to https://lzhoang2801-github-io.translate.goog/gathering-files/opencore-efi?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp .
 
 ## 🤝 **Contributing**
 
