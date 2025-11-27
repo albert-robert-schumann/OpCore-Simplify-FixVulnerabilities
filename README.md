@@ -32,25 +32,27 @@
 >
 > **Security & Maintenance**
 > This project doesn't rely just on people to find vulnerabilities - it also uses CodeQL to increase accuracy and find vulnerabilities on time.
+
 > **Vulnerabilities that have been successfully mitigated:**
 > Outdated UA string - it was using an outdated Chrome 131 UA which exposed users to unpatched Google Chrome flaws that Google has already patched - or even worse - redirect to less secure servers. This is mitigated by using the latest UA for Safari - 26.1.
 > WiFi passwords in wifi_extractor.py were stored in plain text. This could lead to attackers brute forcing the passowrd and gain unauthorized access to the internet - or worse - search the router for vulnerabilities to hijack the router and do whatever they want, including redirecting victims to malicious DNS servers. This is mitigated by encrypting the passwords and decrypt them only if needed.
 > Previously, random MAC addresses generated in `add_null_ethernet_device()` were stored in plain text. This exposed sensitive identifiers that could be used by attackers to fingerprint or track devices. An attacker could obtain the MAC address to identify the device or other devices in the network to launch targeted cyberattacks against the device or even the entire network. This vulnerability is mitigated by obfuscating MAC addresses using SHA-256 hashing. 
+
 > **Other changes and bug fixes:**
 > -The updater in the main branch downloads updates from this repository instead from the official one to avoid the vulnerabilities that have been patched before to be reintroduced.
 > -Adding init.py as a placeholder to improve OpCore-Simplify's reliability, it will apply this only for this project in the near future as the maintainer denied to apply this fix.
 > -Deleting the funding.yml file as it is only for the official repository, not this one.
 
 ## ✨ **Minimum OS requirements to even run OpCore-Simplify at all**
-The minimum OS requirements to run even OpCore-Simplify in the first place are:
--	Windows 10 22H2 with all updates installed
--	macOS
--	Linux
+> The minimum OS requirements to run even OpCore-Simplify in the first place are:
+> -	Windows 10 22H2 with all updates installed
+> -	macOS
+> -	Linux
 
-Recommended requirements:
--	Windows 11 24H2 or newer
--	macOS 12.7.6 Monterey or newer
--	a supported Linux distro with all updates installed
+> **Recommended requirements:**
+> -	Windows 11 24H2 or newer
+> -	macOS 12.7.6 Monterey or newer
+> -	a supported Linux distro with all updates installed
 
 ## ✨ **Features**
 
