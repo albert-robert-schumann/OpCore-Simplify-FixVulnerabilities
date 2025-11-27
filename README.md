@@ -11,7 +11,6 @@
     <a href="#-contributing">Contributing</a> •
     <a href="#-license">License</a> •
     <a href="#-credits">Credits</a> •
-    <a href="#-Contact the owner of the official project">Contact the owner of the official project</a>
   </p>
 
 </div>
@@ -41,17 +40,19 @@
 > Previously, random MAC addresses generated in `add_null_ethernet_device()` were stored in plain text. This exposed sensitive identifiers that could be used by attackers to fingerprint or track devices. An attacker could obtain the MAC address to identify the device or other devices in the network to launch targeted cyberattacks against the device or even the entire network. This vulnerability is mitigated by obfuscating MAC addresses using SHA-256 hashing. 
 
 ## **Other changes and bug fixes:**
-> -The updater in the main branch downloads updates from this repository instead from the official one to avoid the vulnerabilities that have been patched before to be reintroduced.
-> -Adding init.py as a placeholder to improve OpCore-Simplify's reliability, it will apply this only for this project in the near future as the maintainer denied to apply this fix.
-> -Deleting the funding.yml file as it is only for the official repository, not this one.
+> The updater in the main branch downloads updates from this repository instead from the official one to avoid the vulnerabilities that have been patched before to be reintroduced.
 
-## ✨ **Minimum OS requirements to even run OpCore-Simplify at all**
+> Adding init.py as a placeholder to improve OpCore-Simplify's reliability, it will apply this only for this project in the near future as the maintainer denied to apply this fix.
+
+> Deleting the funding.yml file as it is only for the official repository, not this one.
+
+## **Minimum OS requirements to even run OpCore-Simplify at all**
 > The minimum OS requirements to run even OpCore-Simplify in the first place are:
 > -	Windows 10 22H2 with all updates installed
 > -	macOS
 > -	Linux
 
-## **Recommended requirements:**
+## **Recommended OS versions:**
 > -	Windows 11 24H2 or newer
 > -	macOS 12.7.6 Monterey or newer
 > -	a supported Linux distro with all updates installed
