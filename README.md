@@ -37,7 +37,9 @@
 
 > WiFi passwords in wifi_extractor.py were stored in plain text. This could lead to attackers brute forcing the passowrd and gain unauthorized access to the internet - or worse - search the router for vulnerabilities to hijack the router and do whatever they want, including redirecting victims to malicious DNS servers. This is mitigated by encrypting the passwords and decrypt them only if needed.
 
-> Previously, random MAC addresses generated in `add_null_ethernet_device()` were stored in plain text. This exposed sensitive identifiers that could be used by attackers to fingerprint or track devices. An attacker could obtain the MAC address to identify the device or other devices in the network to launch targeted cyberattacks against the device or even the entire network. This vulnerability is mitigated by obfuscating MAC addresses using SHA-256 hashing. 
+> Previously, random MAC addresses generated in `add_null_ethernet_device()` were stored in plain text. This exposed sensitive identifiers that could be used by attackers to fingerprint or track devices. An attacker could obtain the MAC address to identify the device or other devices in the network to launch targeted cyberattacks against the device or even the entire network. This vulnerability is mitigated by obfuscating MAC addresses using SHA-256 hashing.
+
+> An invalid user agent in dsdt.py of Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 could lead to servers treating the project as bot or worse - redirect downloads to legacy servers. This is mitigated by updating the user agent to a valid and latest Safari user agent.
 
 ## **Other changes and bug fixes:**
 > The updater in the main branch downloads updates from this repository instead from the official one to avoid the vulnerabilities that have been patched before to be reintroduced.
