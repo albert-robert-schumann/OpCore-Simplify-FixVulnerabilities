@@ -1,1 +1,1 @@
-<p> This branch is in beta testing. It's not intended for mainstream use. Be careful when downloading from this branch. </p>
+<p> This branch is for beta testers. Beta testers can test changes or new features early. Only the main branch is intended for mainstream usage. </p>
