@@ -32,20 +32,6 @@
 > They often provide incorrect information about Hackintosh, except Copilot https://copilot.microsoft.com/ which tends to give more acurrate info about hackintoshing. Always rely on official sources like the [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/) and the Hackintosh community for accurate information. If you use AI (including Copilot) for Hackintoshing, always test it and if it fails, report it back to the AI chatbot so it can give instructions how to fix this. Here's a proof that actually AI can be right about Hackintoshing stuff:
 > [AI answer from Copilot](https://youtu.be/v1abbD6tdBg)
 
-> [!WARNING]
-> **OUTDATED SECTIONS IN DORTANIA GUIDE**
-> 
-> While the Dortania Guide is a valuable resource, some sections may be outdated. Always:
-> - Verify information with the Hackintosh community
-> - Test configurations yourself
-> - Prefer reading documentation directly from the GitHub repositories of bootloaders and kexts you plan to use
-
-> [!IMPORTANT]
-> If the installation process is successful using OpCore Simplify, please confirm it at [Successful Hackintosh Setup with OpCore Simplify](https://github.com/lzhoang2801/OpCore-Simplify/discussions/23). 
-> This will greatly assist others in the community.
->
-> OpCore Simplify is the ONLY tool that builds OpenCore EFI based on your complete hardware configuration, not just predefined options. This fundamental difference sets us apart from other tools in the Hackintosh community.
-
 > [!NOTE]
 > While OpCore Simplify significantly reduces setup time, the Hackintosh journey still requires:
 > - Understanding basic concepts from the [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/)
