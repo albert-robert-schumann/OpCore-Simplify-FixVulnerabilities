@@ -11,7 +11,7 @@
     <a href="#-contributing">Contributing</a> •
     <a href="#-license">License</a> •
     <a href="#-credits">Credits</a> •
-    <a href="#-contact">Contact the owner of the official project</a>
+    <a href="#-Contact the owner of the official project">Contact the owner of the official project</a>
   </p>
 <p> ## Security & Maintenance </p>
 <p> This project doesn't rely just on people to find vulnerabilities - it also uses CodeQL to increase accuracy and find vulnerabilities on time.</p>
@@ -40,6 +40,17 @@
 > - Patience and persistence in resolving any issues that arise
 >
 > Our tool doesn't eliminate these steps, but it ensures you start with a solid foundation.
+>
+## ✨ **Minimum OS requirements to even run OpCore-Simplify at all**
+The minimum OS requirements to run even OpCore-Simplify in the first place are:
+-	Windows 10 22H2 with all updates installed
+-	macOS
+-	Linux
+
+Recommended requirements:
+-	Windows 11 24H2 or newer
+-	macOS 12.7.6 Monterey or newer
+-	a supported Linux distro with all updates installed
 
 ## ✨ **Features**
 
