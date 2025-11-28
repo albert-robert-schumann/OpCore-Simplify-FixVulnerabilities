@@ -20,14 +20,6 @@
 > They often provide incorrect information about Hackintosh, except Copilot https://copilot.microsoft.com/ which tends to give more acurrate info about hackintoshing. Always rely on official sources like the [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/) and the Hackintosh community for accurate information. If you use AI (including Copilot) for Hackintoshing, always test it and if it fails, report it back to the AI chatbot so it can give instructions how to fix this. Here's a proof that actually AI can be right about Hackintoshing stuff:
 > [AI answer from Copilot](https://youtu.be/v1abbD6tdBg)
 
-> [!NOTE]
-> While OpCore Simplify significantly reduces setup time, the Hackintosh journey still requires:
-> - Understanding basic concepts from the [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/)
-> - Testing and troubleshooting during the installation process, especially if AI is being used for hackintoshing.
-> - Patience and persistence in resolving any issues that arise
->
-> Our tool doesn't eliminate these steps, but it ensures you start with a solid foundation.
-
 ## **Security & Maintenance**
 > This project doesn't rely just on people to find vulnerabilities - it also uses CodeQL to increase accuracy and find vulnerabilities on time.
 
