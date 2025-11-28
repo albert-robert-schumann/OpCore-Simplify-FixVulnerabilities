@@ -104,14 +104,17 @@
 >   - Stores encryption keys, certificates, and passwords securely.
 >   - Ensures that the system boots with trusted firmware and operating system components.
 >   - Acts as a hardware “root of trust” for security features.
+
 > How it works:
 > - When the PC starts, TPM verifies that the boot process hasn’t been tampered with.
 > - It can generate and protect cryptographic keys inside the chip, preventing them from being extracted.
 > - Supports features like disk encryption (e.g., BitLocker) and secure authentication.
+
 > Examples of use:
 > - Windows BitLocker: Uses TPM to unlock encrypted drives only if the boot environment is trusted.
 > - Windows 11 requirement: Microsoft mandates TPM 2.0 for installation to ensure baseline security.
 > - Enterprise security: TPM is used in servers and laptops to enforce trusted computing.
+
 > Hackintosh context:
 > - macOS does not rely on TPM for boot integrity.
 > - macOS doesn't know what TPM is as macOS never really supported TPM at all - instead, Apple uses T2 Chip in Macs from 2018 to 2020, System Integrity Protection (SIP) and Secure Enclave Processor (SEP) as an alternative. If not disabled or spoofed via SSDTs, macOS updates may fail or even brick the system.
