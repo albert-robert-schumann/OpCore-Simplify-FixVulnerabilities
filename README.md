@@ -10,7 +10,6 @@
     <a href="#-how-to-use">How To Use</a> •
     <a href="#-contributing">Contributing</a> •
     <a href="#-license">License</a> •
-    <a href="#-credits">Credits</a> •
   </p>
 
 </div>
@@ -136,10 +135,3 @@ Distributed under the BSD 3-Clause License. See `LICENSE` for more information.
 
 - [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) and [kexts](https://github.com/lzhoang2801/OpCore-Simplify/blob/main/Scripts/datasets/kext_data.py) – The backbone of this project.
 - [SSDTTime](https://github.com/corpnewt/SSDTTime) – SSDT patching utilities.
-
-## 📞 **Contact the owner of the official project**
-
-**Hoang Hong Quan (the maintainer of the official project)**
-> Facebook [@macforce2601](https://facebook.com/macforce2601) &nbsp;&middot;&nbsp;
-> Telegram [@lzhoang2601](https://t.me/lzhoang2601) &nbsp;&middot;&nbsp;
-> Email: lzhoang2601@gmail.com
