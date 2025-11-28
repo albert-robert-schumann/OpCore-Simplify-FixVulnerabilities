@@ -65,14 +65,56 @@
 > The EFI layer handles hardware compatibility, making Hackintosh setups more stable and reproducible.
 > Today, installing macOS updates is safe, provided OpenCore is updated before each system update.
 
+## **What is a boot manager?**
+> A boot manager is a program that controls how your computer starts up, deciding which operating system or boot option to load. It sits between the firmware (BIOS/UEFI) and the operating system, and is especially important when multiple operating systems are installed.
+
 ## **What is OpenCore?**
-OpenCore is a boot manager that allows booting macOS on non-Apple hardware. macOS's built-in boot manager works only on Apple hardware and nothing else, that's why OpenCore is a must if installing macOS on non-Apple hardware.
+> OpenCore is a boot manager that allows booting macOS on non-Apple hardware. macOS's built-in boot manager works only on Apple hardware and nothing else, that's why OpenCore is a must if installing macOS on non-Apple hardware. For example, when you boot up Windows, it first starts Windows Boot manager before even Windows loads. The same goes for any operating system.
 
 ## **What is UEFI?**
-The Unified Extensible Firmware Interface (UEFI) is a specification that defines a software interface between an operating system and platform firmware. UEFI replaces the legacy Basic Input/Output System (BIOS) firmware interface originally present in all IBM PC-compatible personal computers, with most UEFI firmware implementations providing support for legacy BIOS services. UEFI can support remote diagnostics and repair of computers, even with no operating system installed. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
+> The Unified Extensible Firmware Interface (UEFI) is a specification that defines a software interface between an operating system and platform firmware. UEFI replaces the legacy Basic Input/Output System (BIOS) firmware interface originally present in all IBM PC-compatible personal computers, with most UEFI firmware implementations providing support for legacy BIOS services. UEFI can support remote diagnostics and repair of computers, even with no operating system installed. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
 
 ## **What is BIOS?**
-The Basic Input/Output System (BIOS) is firmware used to perform hardware initialization during the booting process (power-on startup), and to provide runtime services for operating systems and programs. The BIOS firmware comes preinstalled on a personal computer's system board, and it is the first software to run when powered on (source: Wikipedia). It's a legacy piece of software that was made back in the 70s and is still used to this day due to its maturity. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
+> The Basic Input/Output System (BIOS) is firmware used to perform hardware initialization during the booting process (power-on startup), and to provide runtime services for operating systems and programs. The BIOS firmware comes preinstalled on a personal computer's system board, and it is the first software to run when powered on (source: Wikipedia). It's a legacy piece of software that was made back in the 70s and is still used to this day due to its maturity. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
+
+## **What is Secure Boot?**
+> Secure Boot is a security feature built into UEFI firmware. It ensures that only operating systems and bootloaders signed with trusted digital certificates can start on the computer.
+
+> Purpose: Prevents malware or unauthorized bootloaders from running during startup by verifying digital signatures against keys stored in the firmware.
+
+> How it works:
+
+> - When the PC powers on, UEFI checks the signature of the bootloader.
+
+> - If the signature matches a trusted key (e.g., Microsoft, Apple), the boot process continues.
+
+> - If not, the system blocks the boot, treating the image as potentially tampered.
+
+> Hackintosh context:
+
+> - Boot managers like Clover and OpenCore are not signed with vendor‑trusted keys.
+
+> - Secure Boot will usually reject them as “untrusted.”
+
+> - To install macOS on non‑Apple hardware, Secure Boot must typically be disabled in UEFI settings.
+
+## **What is Trusted Platform Module (TPM)?**
+> TPM is a dedicated security chip built into modern computers that provides hardware‑based cryptographic functions and system integrity checks.
+> Purpose:
+>   - Stores encryption keys, certificates, and passwords securely.
+>   - Ensures that the system boots with trusted firmware and operating system components.
+>   - Acts as a hardware “root of trust” for security features.
+> How it works:
+> - When the PC starts, TPM verifies that the boot process hasn’t been tampered with.
+> - It can generate and protect cryptographic keys inside the chip, preventing them from being extracted.
+> - Supports features like disk encryption (e.g., BitLocker) and secure authentication.
+> Examples of use:
+> - Windows BitLocker: Uses TPM to unlock encrypted drives only if the boot environment is trusted.
+> - Windows 11 requirement: Microsoft mandates TPM 2.0 for installation to ensure baseline security.
+> - Enterprise security: TPM is used in servers and laptops to enforce trusted computing.
+> Hackintosh context:
+> - macOS does not rely on TPM for boot integrity.
+> - macOS doesn't know what TPM is as macOS never really supported TPM at all - instead, Apple uses T2 Chip in Macs from 2018 to 2020, System Integrity Protection (SIP) and Secure Enclave Processor (SEP) as an alternative. If not disabled or spoofed via SSDTs, macOS updates may fail or even brick the system.
 
 ## **What are kexts?**
 Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to perform different tasks like device drivers or for a different purpose (in Hackintoshing) like patching the OS, injecting information or running tasks. Kexts are not the only part of a good Hackintosh, as they're commonly paired with ACPI patches and fixes. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
