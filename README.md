@@ -53,6 +53,8 @@
 
 > Deleting the funding.yml file as it is only for the official repository, not this one.
 
+> The updater in the release-preview branch was the last one that still pulled updates from the official repository. Now even that one is pulling updates from this repository instead.
+
 > Disabling TPM via SSDTs if for example the motherboard doesn't offer disabling TPM at all (currently in beta)
 
 ## **Minimum OS requirements to even run OpCore-Simplify at all**
