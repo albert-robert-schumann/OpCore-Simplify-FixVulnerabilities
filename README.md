@@ -28,12 +28,6 @@
 >
 > Our tool doesn't eliminate these steps, but it ensures you start with a solid foundation.
 
-## **If the installation of macOS is successfull, please don't forget to confirm in the official discussion** 
-> [!IMPORTANT]
-> If the installation process is successful using OpCore Simplify, please confirm it at [Successful Hackintosh Setup with OpCore Simplify](https://github.com/lzhoang2801/OpCore-Simplify/discussions/23). And don't forget to recommend other people this repository.
-> This will greatly assist others in the community.
-
-> OpCore Simplify is the ONLY tool that builds OpenCore EFI based on your complete hardware configuration, not just predefined options. This fundamental difference sets us apart from other tools in the Hackintosh community.
 ## **Security & Maintenance**
 > This project doesn't rely just on people to find vulnerabilities - it also uses CodeQL to increase accuracy and find vulnerabilities on time.
 
@@ -56,6 +50,39 @@
 > The updater in the release-preview branch was the last one that still pulled updates from the official repository. Now even that one is pulling updates from this repository instead.
 
 > Disabling TPM via SSDTs if for example the motherboard doesn't offer disabling TPM at all (currently in beta)
+
+### **What is Hackintosh?**
+> A Hackintosh is macOS running on non‑Apple hardware.
+
+**Early era (2006–2012):**  
+> Running Mac OS X on PCs required modifying the operating system’s core kernel image.  
+> Updates often broke compatibility, sometimes bricking entire Hackintosh setups.  
+> This was true “hacking” of the OS image — builders literally exploited vulnerabilities in Mac OS X to force it to run on unsupported hardware.
+
+**Modern era (2012–present):**  
+> With Clover and OpenCore's existance, hacking the kernel is no longer required.  
+> Users simply download the official macOS image, flash it to a USB drive, and build an EFI configuration.  
+> The EFI layer handles hardware compatibility, making Hackintosh setups more stable and reproducible.
+> Today, installing macOS updates is safe, provided OpenCore is updated before each system update.
+
+## **What is OpenCore?**
+OpenCore is a boot manager that allows booting macOS on non-Apple hardware. macOS's built-in boot manager works only on Apple hardware and nothing else, that's why OpenCore is a must if installing macOS on non-Apple hardware.
+
+## **What is UEFI?**
+The Unified Extensible Firmware Interface (UEFI) is a specification that defines a software interface between an operating system and platform firmware. UEFI replaces the legacy Basic Input/Output System (BIOS) firmware interface originally present in all IBM PC-compatible personal computers, with most UEFI firmware implementations providing support for legacy BIOS services. UEFI can support remote diagnostics and repair of computers, even with no operating system installed. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
+
+## **What is BIOS?**
+The Basic Input/Output System (BIOS) is firmware used to perform hardware initialization during the booting process (power-on startup), and to provide runtime services for operating systems and programs. The BIOS firmware comes preinstalled on a personal computer's system board, and it is the first software to run when powered on (source: Wikipedia). It's a legacy piece of software that was made back in the 70s and is still used to this day due to its maturity. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
+
+## **What are kexts?**
+Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to perform different tasks like device drivers or for a different purpose (in Hackintoshing) like patching the OS, injecting information or running tasks. Kexts are not the only part of a good Hackintosh, as they're commonly paired with ACPI patches and fixes. (source: https://dortania.github.io/OpenCore-Install-Guide/terminology.html)
+
+## **If the installation of macOS is successfull, please don't forget to confirm in the discussions** 
+> [!IMPORTANT]
+> If the installation process is successful using OpCore Simplify, please confirm it at [Successful Hackintosh Setup with OpCore Simplify](https://github.com/albert-robert-schumann/OpCore-Simplify-VulnerabilitiesFix/discussions/7). And don't forget to recommend other people this repository.
+> This will help people build their own Hackintoshes too.
+
+> OpCore Simplify is the ONLY tool that builds OpenCore EFI based on your complete hardware configuration, not just predefined options. This fundamental difference sets us apart from other tools in the Hackintosh community.
 
 ## **Minimum OS requirements to even run OpCore-Simplify at all**
 > The minimum OS requirements to run even OpCore-Simplify in the first place are:
