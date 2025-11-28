@@ -54,6 +54,8 @@
 
 > Deleting the funding.yml file as it is only for the official repository, not this one.
 
+> Disabling TPM via SSDTs if for example the motherboard doesn't offer disabling TPM at all (currently in beta)
+
 ## **Minimum OS requirements to even run OpCore-Simplify at all**
 > The minimum OS requirements to run even OpCore-Simplify in the first place are:
 > -	Windows 10 22H2 with all updates installed
