@@ -187,11 +187,9 @@ Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to per
 ## 🚀 **How To Use**
 For a tutorial on how to use OpCore-Simplify, please go to https://lzhoang2801-github-io.translate.goog/gathering-files/opencore-efi?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp .
 
-## 🤝 **Contributing**
+## 🤝 **Contributing and finding vulnerabilities**
 
-Contributions are **highly appreciated**! If you have ideas to improve this project, feel free to fork the repo and create a pull request, or open an issue with the "enhancement" tag.
-
-Don't forget to ⭐ star the project! Thank you for your support! 🌟
+If you have any ideas on how to improve this project or you have found vulnerabilities, don't hesitate to open an issue, fork this project and/or send a pull request.
 
 ## 📜 **License**
 
