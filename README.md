@@ -46,7 +46,8 @@
 > Version numbering is now available - it starts from 1.0 for stable, 1.0 beta 9 for release preview and 1.1 beta 1 for beta testers.
 
 ## **Known issues**
-> 
+> When the GPU is unsupported by OpCore-Simplify, it says "You cannot install macOS without a supported GPU." "Please do NOT spam my inbox or issue tracker about this issue anymore!" - this message is inherited from the main repository, where users were literally spamming with unsupported GPU issues. This will be fixed in the future.
+> Some GPUs are supported by OpenCore but not by OpCore-Simplify. This will be fixed in a future version, sooner or later depending on your GPU. GPUs that max out at very old versions of macOS, for example Sierra, El Capitan and Lion - for them support is out of scope.
 
 ### **What is Hackintosh?**
 > A Hackintosh is macOS running on non‑Apple hardware.
