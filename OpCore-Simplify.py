@@ -477,9 +477,11 @@ class OCPE:
                     print("Disabling TPM at OpenCore level...")
                     # Ensure tools are downloaded first
                     gatheringFiles().gather_bootloader_kexts()
+                    # Default EFI results path
+                    default_efi = os.path.join(self.result_dir, "EFI")
                     # Then run the TPM disable script
                     subprocess.run(
-                        [sys.executable, os.path.join("Scripts", "tpm_ssdt_disable.py")],
+                        [sys.executable, os.path.join("Scripts", "tpm_ssdt_disable.py"),"--efi", default_efi],
                         check=True
                     )
                 else:
