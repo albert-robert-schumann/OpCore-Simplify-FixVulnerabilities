@@ -153,7 +153,7 @@ class gatheringFiles:
     def gather_bootloader_kexts(self, kexts, macos_version):
         self.utils.head("Gathering Files")
         print("")
-        print("Please wait for download OpenCorePkg, kexts and macserial...")
+        print("Please wait for download OpenCorePkg, kexts, macserial, acpidump and iasl...")
 
         download_history = self.utils.read_file(self.download_history_file)
         if not isinstance(download_history, list):
@@ -165,13 +165,28 @@ class gatheringFiles:
 
         seen_download_urls = set()
 
-        for product in kexts + [{"Name": "OpenCorePkg"}]:
+        for product in kexts + [{"Name": "OpenCorePkg"}, {"Name": "acpidump"}, {"Name": "iasl"}]:
             if not isinstance(product, dict) and not product.checked:
                 continue
 
             product_name = product.name if not isinstance(product, dict) else product.get("Name")
             
-            if product_name == "AirportItlwm":
+            if product_name == "acpidump":
+                source_path = os.path.join(self.temporary_dir, "acpidump.exe")
+                destination_dir = os.path.join(self.ock_files_dir, "tools", "acpidump")
+                destination_dir = os.path.join(
+                    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),"Scripts"
+                )
+            if product_name == "iasl":
+                source_zip = os.path.join(self.temporary_dir, "iasl.zip")
+                destination_dir = os.path.join(
+                    os.path.dirname(os.path.dirname(os.path.realpath(__file__))),"Scripts"
+                )
+                self.utils.create_folder(destination_dir, remove_content=False)
+                with zipfile.ZipFile(source_zip, "r") as z:
+                    z.extractall(destination_dir)
+                continue    
+            elif product_name == "AirportItlwm":
                 version = macos_version[:2]
                 if all((kexts[kext_maestro.kext_data.kext_index_by_name.get("IOSkywalkFamily")].checked, kexts[kext_maestro.kext_data.kext_index_by_name.get("IO80211FamilyLegacy")].checked)) or self.utils.parse_darwin_version("24.0.0") <= self.utils.parse_darwin_version(macos_version):
                     version = "22"
