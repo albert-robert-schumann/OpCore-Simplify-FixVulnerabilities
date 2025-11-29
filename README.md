@@ -44,7 +44,7 @@
 
 > Some GPUs are supported by OpenCore but not by OpCore-Simplify. This will be fixed in a future version, sooner or later depending on your GPU. GPUs that max out at very old versions of macOS, for example Sierra, El Capitan and Lion - for them support is out of scope.
 
-> SMBIOS selection is done based on CPU generation, not on the entire motherboard which can create compatability issues. Verify that the SMBIOS that OpCore-Simplify-VulnerabilitiesFix suggests are Macs with similar or the same configuration, e.g not suggesting iMac 2020 on a laptop - you should then immediately change the serial number unless you are okay with no battery readings and having tons of problems like sleep/wake, or anything like this. This will be fixed
+> SMBIOS selection is done based on CPU generation, not on the entire motherboard which can create compatability issues. Verify that the SMBIOS that OpCore-Simplify-VulnerabilitiesFix suggests are Macs with similar or the same configuration, e.g not suggesting iMac 2020 on a laptop - you should then immediately change the serial number unless you are okay with no battery readings and having tons of problems like sleep/wake, or anything like this. This will be fixed in the future.
 
 ### **What is Hackintosh?**
 > A Hackintosh is macOS running on non‑Apple hardware.
