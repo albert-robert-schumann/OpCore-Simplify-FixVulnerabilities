@@ -43,7 +43,10 @@
 
 > Disabling TPM via SSDTs if for example the motherboard doesn't offer disabling TPM at all (currently in beta) - will be released in version 1.1.
 
-> Version numbering is now available - it starts from 1.0 for stable, 1.1p for release preview and 1.1b for beta testers.
+> Version numbering is now available - it starts from 1.0 for stable, 1.0 beta 9 for release preview and 1.1 beta 1 for beta testers.
+
+## **Known issues**
+> 
 
 ### **What is Hackintosh?**
 > A Hackintosh is macOS running on non‑Apple hardware.
@@ -134,7 +137,7 @@ Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to per
 > -	macOS 12.7.6 Monterey or newer
 > -	a supported Linux distro with all updates installed
 
-## ✨ **Features**
+## **Compatability with OpCore-Simplify:**
 
 1. **Comprehensive Hardware and macOS Support**  
    Fully supports modern hardware. Use `Compatibility Checker` to check supported/unsupported devices and macOS version supported.
@@ -142,10 +145,37 @@ Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to per
    | **Component**  | **Supported**                                                                                       |
    |----------------|-----------------------------------------------------------------------------------------------------|
    | **CPU**        | Intel: Nehalem and Westmere (1st Gen) (for first gens there are some caveats: on legacy BIOS systems with Nehalem or Westmere architectures, only Clover can run - I tested this) → Arrow Lake (15th Gen/Core Ultra Series 2) <br> AMD: Ryzen and Threadripper with [AMD Vanilla](https://github.com/AMD-OSX/AMD_Vanilla) |
-   | **GPU**        | Intel iGPU: Iron Lake (1st Gen) → Ice Lake (10th Gen) <br> AMD APU: The entire Vega Raven ASIC family (Ryzen 1xxx → 5xxx, 7x30 series) <br> AMD dGPU: Navi 23, Navi 22, Navi 21 generations, and older series <br> NVIDIA: Kepler, Pascal, Maxwell, Fermi, Tesla generations |
-   | **macOS**      | macOS High Sierra → macOS Tahoe |
+   | **GPU**        |Compatible with OpCore-Simplify: Intel iGPU: Iron Lake (1st Gen) → Ice Lake (10th Gen) <br> AMD APU: The entire Vega Raven ASIC family (Ryzen 1xxx → 5xxx, 7x30 series) <br> AMD dGPU: Navi 23,
+   GPUs that are incompatible with OpCore-Simplify but are supported by OpenCore are the following:
+   Legacy GPUs:
+   All Intel GMA GPUs (support for them ends at including Mac OS X 10.7 "Lion") - support is out of scope; don't even attempt to run any other operating system except Linux or Android on these GPUs, most of these won't work properly with Windows and will work poorly with Mac OS X 10.7 Lion.
+   ATI Radeon Park series (support for them ends at including OS X 10.11 El Capitan) - support is out of scope, Clover + UniBeast is recommended on these GPUs
+   ATI Radeon Cedar series (support for them ends at including macOS 10.12 Sierra, experimental support only in macOS 10.15 Catalina via tools like Legacy Video Patch) - support is out of scope, Clover + UniBeast is recommended on these GPUs
+   ATI Radeon HD X1000 series (support for them ends at including Mac OS X 10.7 Lion) - support is out of scope; don't even attempt to run any other operating system except Linux or Android on these GPUs, most of these won't work properly with Windows and will work poorly with Mac OS X 10.7 Lion.
+   ATI Radeon HD X800 (support for them ends at including Mac OS X 10.7 Lion) - support is out of scope; don't even attempt to run any other operating system except Linux or Android on these GPUs, most of these won't work properly with Windows and will work poorly with Mac OS X 10.7 Lion.
+   NVIDIA GeForce 7000 series (support for them ends at including Mac OS X 10.7 Lion) - support is out of scope; don't even attempt to run any other operating system except Linux or Android on these GPUs, most of these won't work properly with Windows and will work poorly with Mac OS X 10.7 Lion.
+   NVIDIA GeForce 6000 series (support for them ends at including Mac OS X 10.7 Lion) - support is out of scope; don't even attempt to run any other operating system except Linux or Android on these GPUs, most of these won't work properly with Windows and will work poorly with Mac OS X 10.7 Lion.
+   
+   Modern GPUs:
+   Intel HD 8000 (support for them ends at macOS 12 Monterey and maybe OpenCore Legacy Patcher may support it beyond this; and starts from OS X 10.8 Mountain Lion) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   AMD Radeon HD R7/R9 series (support for them ends at including macOS 12 Monterey and maybe OpenCore Legacy Patcher may support it beyond this; and starts from OS X 10.10 Yosemite) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   AMD Polaris 10 and 20 series (support for them ends at including macOS 12 Monterey and maybe OpenCore Legacy Patcher may support it beyond this; and starts from macOS 10.12 Sierra) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   AMD Vega 10 series (support for them ends at including macOS 14 Sonoma and OpenCore Legacy Patcher supports it; starts from macOS 10.13 High Sierra) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   AMD Navi 10 series (supported in macOS 26 Tahoe as well; support starts at macOS 10.15 Catalina) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   AMD Navi 21 series (supported in macOS 26 Tahoe as well; support starts at macOS 11 Big Sur) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   AMD Navi 22 series - support for those is mistery. If you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs and I'll check if macOS supports those and if yes, then implement support.
+   AMD APUs: for some AMD APUs support for macOS is mistery. If you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs and I'll check if macOS supports those and if yes, then implement support.
+   AMD Navi 23 series (supported in macOS 26 Tahoe as well; support starts at macOS 12 Monterey) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   Intel GPUs newer than 10 generation: requires spoofing - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   ATI Radeon HD 5000 series (support for them ends at including macOS 10.13 High Sierra, except for Cedar and Park GPUs for which support ends even earlier; supported since around Snow Leopard or Lion; OCLP support depends on the exact GPU and not universal) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
+   ATI Radeon HD 2000-4000 series (support ends at including macOS 10.13 High Sierra, OpenCore Legacy Patcher is supported) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
 
-2. **ACPI Patches and Kexts**  
+GPUs that aren't listed here in this list - support for them is out of scope because macOS doesn't support those. Even if someone in the world is able to write GPU drivers for unsupported GPUs, it would be a security nightmare afterwards as it may need disabling permanently System Integrity Protection, OpenCore's emulated Seucre Boot, AMFI, plus disabling temporarily Gatekeeper and be unstable at boot.
+         
+   
+   | **macOS**      | macOS 10.13 High Sierra → macOS 26.x Tahoe |
+
+3. **ACPI Patches and Kexts**  
    Automatically detects and adds ACPI patches and kexts based on hardware configuration.
    
    - Integrated with [SSDTTime](https://github.com/corpnewt/SSDTTime) for common patches (e.g., FakeEC, FixHPET, PLUG, RTCAWAC).
@@ -156,10 +186,10 @@ Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to per
       - Add devices including ALS0, BUS0, MCHC, PMCR, PNLF, RMNE, IMEI, USBX, XOSI, along with a Surface Patch.
       - Enable ALSD and GPI0 devices.
 
-3. **Automatic Updates**  
+4. **Automatic Updates**  
     Automatically checks for and updates OpenCorePkg and kexts from [Dortania Builds](https://dortania.github.io/builds/) and GitHub releases before each EFI build.
             
-4. **EFI Configuration**  
+5. **EFI Configuration**  
    Apply additional customization based on both widely used sources and personal experience.
 
    - Spoof GPU IDs for certain AMD GPUs not recognized in macOS.
@@ -180,7 +210,7 @@ Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to per
 
    and more...
 
-5. **Easy Customization**  
+6. **Easy Customization**  
    In addition to the default settings applied, users can easily make further customizations if desired.
 
    - Custom ACPI patches, kexts, and SMBIOS adjustments (**not recommended**).
