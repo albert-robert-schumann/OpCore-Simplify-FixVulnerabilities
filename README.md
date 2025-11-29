@@ -14,12 +14,6 @@
 
 </div>
 
-> [!CAUTION]
-> **DO NOT RELY SOLELY ON AI/LLM SOURCES FOR BUILDING HACKINTOSHES**
-> 
-> They often provide incorrect information about Hackintosh, except Copilot https://copilot.microsoft.com/ which tends to give more acurrate info about hackintoshing. Always rely on official sources like the [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/) and the Hackintosh community for accurate information. If you use AI (including Copilot) for Hackintoshing, always test it and if it fails, report it back to the AI chatbot so it can give instructions how to fix this. Here's a proof that actually AI can be right about Hackintoshing stuff:
-> [AI answer from Copilot](https://youtu.be/v1abbD6tdBg)
-
 ## **Security & Maintenance**
 > This project doesn't rely just on people to find vulnerabilities - it also uses CodeQL to increase accuracy and find vulnerabilities on time.
 
@@ -48,6 +42,7 @@
 ## **Known issues**
 > When the GPU is unsupported by OpCore-Simplify, it says "You cannot install macOS without a supported GPU." "Please do NOT spam my inbox or issue tracker about this issue anymore!" - this message is inherited from the main repository, where users were literally spamming with unsupported GPU issues. This will be fixed in the future.
 > Some GPUs are supported by OpenCore but not by OpCore-Simplify. This will be fixed in a future version, sooner or later depending on your GPU. GPUs that max out at very old versions of macOS, for example Sierra, El Capitan and Lion - for them support is out of scope.
+> SMBIOS selection is done based on CPU generation, not on the entire motherboard which can create compatability issues. Verify that the SMBIOS that OpCore-Simplify-VulnerabilitiesFix suggests are Macs with similar or the same configuration, e.g not suggesting iMac 2020 on a laptop - you should then immediately change the serial number unless you are okay with no battery readings and having tons of problems like sleep/wake, or anything like this.
 
 ### **What is Hackintosh?**
 > A Hackintosh is macOS running on non‑Apple hardware.
