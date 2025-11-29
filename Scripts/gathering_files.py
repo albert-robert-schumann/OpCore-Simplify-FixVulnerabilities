@@ -22,6 +22,8 @@ class gatheringFiles:
         self.amd_vanilla_patches_url = "https://raw.githubusercontent.com/AMD-OSX/AMD_Vanilla/beta/patches.plist"
         self.aquantia_macos_patches_url = "https://raw.githubusercontent.com/CaseySJ/Aquantia-macOS-Patches/refs/heads/main/CaseySJ-Aquantia-Patch-Sets-1-and-2.plist"
         self.hyper_threading_patches_url = "https://github.com/b00t0x/CpuTopologyRebuild/raw/refs/heads/master/patches_ht.plist"
+        self.iasl_url = "https://acpica.org/downloads/binary/iasl-win64.zip"
+        self.acpidump_url = "https://github.com/acpica/acpica/releases/download/latest/acpidump.exe"
         self.temporary_dir = self.utils.get_temporary_dir()
         self.ock_files_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "OCK_Files")
         self.download_history_file = os.path.join(self.ock_files_dir, "history.json")
@@ -79,6 +81,16 @@ class gatheringFiles:
             "id": dortania_builds_data["OpenCorePkg"]["versions"][0]["release"]["id"], 
             "url": dortania_builds_data["OpenCorePkg"]["versions"][0]["links"]["release"],
             "sha256": dortania_builds_data["OpenCorePkg"]["versions"][0]["hashes"]["release"]["sha256"]
+
+            "product_name": "acpidump",
+            "id": "v1.0",
+            "url": self.acpidump_url,
+            "sha256": "known_hash_here"
+
+            "product_name": "iasl",
+            "id": "v1.0",
+            "url": self.iasl_url,
+            "sha256": "known_hash_here"
         })
 
         return sorted(download_database, key=lambda x:x["product_name"])
