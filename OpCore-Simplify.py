@@ -392,7 +392,7 @@ class OCPE:
                     for device, _ in disabled_devices.items():
                         print("    - {}".format(device))
             print("")
-
+            print("---OpCore-Simplify-VulnerabilitiesFix 1.1b for insiders---")
             print("For now, you need to download a macOS image manually and flash it preferably using an existing macOS computer.")
             print("1. Select Hardware Report")
             print("This script includes hardware sniffer only for Windows.")
