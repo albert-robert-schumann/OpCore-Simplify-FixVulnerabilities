@@ -390,7 +390,7 @@ class OCPE:
                     for device, _ in disabled_devices.items():
                         print("    - {}".format(device))
             print("")
-
+            print("---OpCore-Simplify-VulnerabilitiesFix v1.0---")
             print("1. Select Hardware Report")
             print("2. Select macOS Version")
             print("3. Customize ACPI Patch")
