@@ -17,6 +17,8 @@ import re
 import shutil
 import traceback
 import time
+import subprocess
+import platform
 
 class OCPE:
     def __init__(self):
@@ -391,12 +393,16 @@ class OCPE:
                         print("    - {}".format(device))
             print("")
 
+            print("For now, you need to download a macOS image manually and flash it preferably using an existing macOS computer.")
             print("1. Select Hardware Report")
+            print("This script includes hardware sniffer only for Windows.")
+            print("If you are using another operating system, you need to download a hardware sniffer manually.")
             print("2. Select macOS Version")
             print("3. Customize ACPI Patch")
             print("4. Customize Kexts")
             print("5. Customize SMBIOS Model")
             print("6. Build OpenCore EFI")
+            print("7. Disable TPM at OpenCore level instead of UEFI (this is required if your motherboard doesn't allow you to disable TPM at all) (requires Windows)")
             print("")
             print("Q. Quit")
             print("")
@@ -464,6 +470,26 @@ class OCPE:
                 print("\t{}".format(self.result_dir))
                 print("")
                 self.u.request_input("Press Enter to main menu...")
+            self.u.request_input("Press Enter to main menu...")
+            elif option == "7":
+                print("Checking operating system requirements...")
+                if platform.system="Windows":
+                    print("Disabling TPM at OpenCore level...")
+                    # Ensure tools are downloaded first
+                    gatheringFiles().gather_bootloader_kexts()
+                    # Then run the TPM disable script
+                    subprocess.run(
+                        [sys.executable, os.path.join("Scripts", "tpm_ssdt_disable.py")],
+                        check=True
+                    )
+                else:
+                    print("You're running another operating system that is not supported yet.")
+                    print("To disable TPM via SSDTs, you need to boot into Windows.")
+                    print("If you haven't installed Windows on your computer yet, you need to install it now.")
+                    self.u.request_input("Press Enter to return...")
+             else:
+                print("Invalid input. Please, try again")
+                self.u.request_input("Press Enter to return...")
 
 if __name__ == '__main__':
     update_flag = updater.Updater().run_update()
