@@ -495,6 +495,10 @@ if __name__ == '__main__':
     update_flag = updater.Updater().run_update()
     if update_flag:
         os.execv(sys.executable, ['python3'] + sys.argv)
+    else:
+        print("The updater failed to launch. Quitting OpCore-Simplify...")
+        time.sleep(10)
+        sys.exit(3)
 
     o = OCPE()
     while True:
