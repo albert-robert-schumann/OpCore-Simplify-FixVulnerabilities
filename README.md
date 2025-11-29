@@ -147,7 +147,10 @@ Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to per
    |----------------|-----------------------------------------------------------------------------------------------------|
    | **CPU**        | Intel: Nehalem and Westmere (1st Gen) (for first gens there are some caveats: on legacy BIOS systems with Nehalem or Westmere architectures, only Clover can run - I tested this) → Arrow Lake (15th Gen/Core Ultra Series 2) <br> AMD: Ryzen and Threadripper with [AMD Vanilla](https://github.com/AMD-OSX/AMD_Vanilla) |
    | **GPU**        |Compatible with OpCore-Simplify: Intel iGPU: Iron Lake (1st Gen) → Ice Lake (10th Gen) <br> AMD APU: The entire Vega Raven ASIC family (Ryzen 1xxx → 5xxx, 7x30 series) <br> AMD dGPU: Navi 23,
-   GPUs that are incompatible with OpCore-Simplify but are supported by OpenCore are the following:
+       
+   
+   | **macOS**      | macOS 10.13 High Sierra → macOS 26.x Tahoe |
+GPUs that are incompatible with OpCore-Simplify but are supported by OpenCore are the following:
    Legacy GPUs:
    All Intel GMA GPUs (support for them ends at including Mac OS X 10.7 "Lion") - support is out of scope; don't even attempt to run any other operating system except Linux or Android on these GPUs, most of these won't work properly with Windows and will work poorly with Mac OS X 10.7 Lion.
    ATI Radeon Park series (support for them ends at including OS X 10.11 El Capitan) - support is out of scope, Clover + UniBeast is recommended on these GPUs
@@ -172,9 +175,6 @@ Kexts, also known as Kernel Extensions, are macOS's drivers. They're used to per
    ATI Radeon HD 2000-4000 series (support ends at including macOS 10.13 High Sierra, OpenCore Legacy Patcher is supported) - if you want to run macOS on one of these, you need to open an issue or a pull request to add support for these GPUs
 
 GPUs that aren't listed here in this list - support for them is out of scope because macOS doesn't support those. Even if someone in the world is able to write GPU drivers for unsupported GPUs, it would be a security nightmare afterwards as it may need disabling permanently System Integrity Protection, OpenCore's emulated Seucre Boot, AMFI, plus disabling temporarily Gatekeeper and be unstable at boot.
-         
-   
-   | **macOS**      | macOS 10.13 High Sierra → macOS 26.x Tahoe |
 
 3. **ACPI Patches and Kexts**  
    Automatically detects and adds ACPI patches and kexts based on hardware configuration.
